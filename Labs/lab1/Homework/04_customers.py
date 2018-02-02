@@ -23,9 +23,13 @@ for cus in customer_list:
         w += 1
     else:
         a += 1
+# e = customer.find({"ref": "events"}).count()
+# w = customer.find({"ref": "wom"}).count()
+# a = customer.find({"ref": "ads"}).count()
 print(e, "events")
 print(w, 'wom')
 print(a, 'ads')
+
 
 # 2. draw a pie chart showing how much percentage of each reference
 import matplotlib

@@ -32,8 +32,9 @@ my_time = datetime.time(7, 0)
 #             gmail.send(msg)
 #             print("Gmail sent successfully!")
 #             break
+from time import sleep
 while True:
-    if check_time == my_time:
+    if check_time >= my_time:
         gmail.send(msg)
         print("Gmail sent successfully!")
         break
@@ -41,3 +42,4 @@ while True:
         now = datetime.datetime.now()
         check_time = datetime.time(now.hour, now.minute)
         continue
+    sleep(1500)
