@@ -16,10 +16,11 @@ html_file.close()
 # 2 Extract ROI (Region of interest)
 
 soup = BeautifulSoup(html_content, 'html.parser')
-table = soup.find_all('table')
+# table = soup.find_all('table')
+table = soup.find('table',id = 'tableContent')
 
-row_list = table[3].find_all('tr')
-
+# row_list = table[3].find_all('tr')
+row_list = table.find_all('tr')
 # print(row_list[0])
 tab_data = []
 for k, row in enumerate(row_list):
