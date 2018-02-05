@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import pyexcel
 
 a_list_of_dictionaries = [
@@ -16,3 +17,23 @@ a_list_of_dictionaries = [
 ]
 
 pyexcel.save_as(records = a_list_of_dictionaries, dest_file_name = 'excel_py.xlsx')
+=======
+import pyexcel
+
+a_list_of_dictionaries = [
+    {
+        'title': 'SU25',
+        'link': 'http://google.com.vn'
+    },
+    {
+        'title': 'SU25-2',
+        'link': 'http://google.com.vn/2'
+    },
+    {
+        'title': 'SU25-3',
+        'link': 'http://google.com.vn/3'
+    },
+]
+
+pyexcel.save_as(records = a_list_of_dictionaries, dest_file_name = 'excel_py.xlsx')
+>>>>>>> 325dcfabcacc0238816bc9778fbba0c92cfb0265
