@@ -5,12 +5,15 @@ from urllib.request import urlopen
 from bs4 import BeautifulSoup
 import pyexcel
 
+# 1 Download website
 data = urlopen(url).read()
 html_content = data.decode('utf-8')
 
-# html_file = open('itunes_topsong.html', 'wb') # write
-# html_file.write(data)
-# html_file.close()
+html_file = open('VNM_cafef.html', 'wb') # write
+html_file.write(data)
+html_file.close()
+
+# 2 Extract ROI (Region of interest)
 
 soup = BeautifulSoup(html_content, 'html.parser')
 table = soup.find_all('table')
@@ -37,5 +40,7 @@ for k, row in enumerate(row_list):
         tab_data.append(one_row)
     else:
         pass
+
+# 3 Extract News
 # print(tab_data)
 pyexcel.save_as(records = tab_data, dest_file_name = 'VNM_BCTC_4Q.xlsx')
