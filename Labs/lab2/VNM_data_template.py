@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import win_unicode_console
 win_unicode_console.enable()
 
@@ -136,4 +135,3 @@ print(nicedatalist)
 import pyexcel
 
 pyexcel.save_as(records= nicedatalist, dest_file_name= output_file)
->>>>>>> 325dcfabcacc0238816bc9778fbba0c92cfb0265
