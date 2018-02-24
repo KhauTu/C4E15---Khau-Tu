@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Profile C4E15</title>
+  </head>
+  <body>
+    <p>{{ article_title }}</p>
+    {% for profile in profiles %}
+    <p>Name: {{ profile.Name }}</p>
+    <p><i>Age: {{ profile.Age }}</i></p>
+    <p><i>Gender: {{ profile.Gender }}</i></p>
+    <p><i>Interest: {{ profile.Interest }}</i></p>
+    {% endfor %}
+  </body>
+</html>
