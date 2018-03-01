@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Customer list 10 males</title>
+  </head>
+  <body>
+    <h2>Customer list of 10 males, not contacted</h2>
+    {%  for customer in all_customer  %}
+    {%  if loop.index < 11   %}
+      <p>{{ loop.index }}</p>
+      <p><i>{{ customer.id  }}</i></p>
+      <p><b>{{ customer.name  }}</b></p>
+      <p>{{ customer.gender }}</p>
+      <p>{{ customer.email }}</p>
+      <p>{{ customer.phone_number }}</p>
+      <p>{{ customer.job }}</p>
+      <p>{{ customer.company }}</p>
+      <p>{{ customer.contacted }}</p>
+    {%  else %}
+      <p></p>
+    {%  endif %}
+    {%  endfor  %}
+
+  </body>
+</html>
