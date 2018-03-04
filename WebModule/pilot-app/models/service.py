@@ -1,4 +1,4 @@
-from mongoengine import Document, StringField, IntField, BooleanField
+from mongoengine import Document, StringField, IntField, BooleanField, ListField
 
 # Create collection
 class Service(Document):

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mùa đông không lạnh</title>
+  </head>
+  <body>
+    <h2>admin</h2>
+    <!-- <table>
+      {% for service in all_services %}
+      <tr>
+        <th>Name</th>
+        <th>Yob</th>
+        <th>Gender</th>
+        <th>Height</th>
+        <th>Address</th>
+      </tr>
+      <tr>
+        <td>{{  service.name  }}</td>
+
+        <p>{{ service.yob }}</p>
+        <p>{{ service.gender }}</p>
+        <p>{{ service.height  }}</p>
+        <p>{{ service.address  }}</p>
+      </tr>
+      {%  endfor  %}
+    </table> -->
+
+    <table border = '1px'>
+    <thead>
+      <th>STT</th>
+      <th>Tên</th>
+      <th>Năm sinh</th>
+      <th>Giới tính</th>
+      <th>Địa chỉ</th>
+      <th>SĐT</th>
+      <th>Trạng thái</th>
+      <th></th>
+    </thead>
+    <tbody>
+      {%  for service in services   %}
+
+      <tr>
+        <td>{{  loop.index  }}</td>
+        <td>{{  service.name  }}</td>
+        <td>{{  service.yob }}</td>
+        <td> {{ "nữ" if service.gender == 0 else "nam"   }} </td>
+        <td>{{  service.address }}</td>
+        <td>{{  service.phone }}</td>
+        <td>
+          {{ "rảnh" if service.status else "bận"  }}
+        </td>
+        <td>
+          <a href="#">Sửa</a>
+          <a href="{{  url_for('delete', service_id = service.id)  }}">Xóa</a>
+        </td>
+      </tr>
+      {%  endfor  %}
+      </tbody>
+    </table>
+
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update info</title>
+  </head>
+  <body>
+  <h2>Update Info</h2>
+
+  <form method="post">
+
+    <label for="">Tên</label>
+    <input type="text" name="name" value="{{  service_update.name   }}"> <br>
+
+    <label for="">Năm sinh</label>
+    <input type="text" name="yob" value="{{  service_update.yob   }}"> <br>
+
+    <label for="">Giới tính</label>
+    <input type="radio" name="gender" value="0" checked> nữ
+    <input type="radio" name="gender" value="1"> nam <br>
+
+    <label for="">Chiều cao</label>
+    <input type="text" name="height" value="{{  service_update.height   }}"> <br>
+
+    <label for="">Số điện thoại</label>
+    <input type="text" name="phone" value="{{  service_update.phone   }}"> <br>
+
+    <label for="">Địa chỉ</label>
+    <input type="text" name="address" value="{{  service_update.address   }}"> <br>
+
+    <!-- <label for="">Trạng thái</label>
+    <input type="radio" name="status" value="{{  service_update.status   }}" checked> {{  "false" if service_update.status == False else "true" }}
+    <input type="radio" name="status" value="{{  "false" if service_update.status != False else "true" }}"> {{  "false" if service_update.status != False else "true" }} <br> -->
+
+
+    <label for="">Ảnh</label>
+    <input type="text" name="image" value="{{  service_update.image   }}"> <br>
+
+    <label for="">Tính cách</label>
+    <input type="text" name="desciption" value="{{  service_update.desciption   }}"> <br>
+
+    <label for="">Số đo</label>
+    <input type="" name="measurements" value="{{  service_update.measurements  }}"> <br>
+
+    <button type="submit" name="">Cập nhật</button> <br>
+
+  </form>
+
+  </body>
+</html>
