@@ -52,29 +52,40 @@ def update(service_id):
         return render_template('update_form.html', service_update = service_update)
     elif request.method == 'POST':
         form = request.form
+        # print(*form.items())
+        # print(form['status'])
+        # status = form['status']
+        measure1 = int(form['measure1'])
+        measure2 = int(form['measure2'])
+        measure3 = int(form['measure3'])
+        set_measure = [measure1, measure2, measure3]
+        # if status == 1:
+        #     set_status = True
+        # else:
+        #     set_status = False
+
         service_update.update(set__name = form['name'],
-        set__yob = form['yob'],
-        set__gender = form['gender'],
-        set__height = form['height'],
-        set__phone = form['phone'],
-        set__address = form['address'],
-        # set__status = str_to_bool(form['status']),
-        # json.loads(form['status']),
-        set__image = form['image'],
-        set__desciption = form['desciption'],
-        set__measurements = form['measurements'].split()
-        )
+                                set__yob = form['yob'],
+                                set__gender = form['gender'],
+                                set__height = form['height'],
+                                set__phone = form['phone'],
+                                set__address = form['address'],
+                                set__status = True if form['status'] == 1 else False, # set__status == set_status
+                                set__image = form['image'],
+                                set__desciption = form['desciption'],
+                                set__measurements = set_measure # form['measurements'].split('-')
+                                )
 
         service_update.reload()
-        # new_service = Service(name = name,
-        #                         yob = yob,
-        #                         gender = gender,
-        #                         height = height,
-        #                         phone = phone,
-        #                         address = address,
-        #                         desciption = desciption,
-        #                         measurements = measurements,
-        #                         )
+        # # new_service = Service(name = name,
+        # #                         yob = yob,
+        # #                         gender = gender,
+        # #                         height = height,
+        # #                         phone = phone,
+        # #                         address = address,
+        # #                         desciption = desciption,
+        # #                         measurements = measurements,
+        # #                         )
         # new_service.save()
         return "Updated"
 

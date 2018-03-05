@@ -28,9 +28,18 @@
     <label for="">Địa chỉ</label>
     <input type="text" name="address" value="{{  service_update.address   }}"> <br>
 
-    <!-- <label for="">Trạng thái</label>
-    <input type="radio" name="status" value="{{  service_update.status   }}" checked> {{  "false" if service_update.status == False else "true" }}
-    <input type="radio" name="status" value="{{  "false" if service_update.status != False else "true" }}"> {{  "false" if service_update.status != False else "true" }} <br> -->
+    <label for="">Trạng thái</label>
+
+
+      {% if service_update.status == True  %}
+      <input type="radio" name="status" value=1 checked> True
+      <input type="radio" name="status" value=0> False <br>
+      {% else  %}
+      <input type="radio" name="status" value=1> True
+      <input type="radio" name="status" value=0 checked> False <br>
+      {% endif  %}
+
+
 
 
     <label for="">Ảnh</label>
@@ -40,7 +49,9 @@
     <input type="text" name="desciption" value="{{  service_update.desciption   }}"> <br>
 
     <label for="">Số đo</label>
-    <input type="" name="measurements" value="{{  service_update.measurements  }}"> <br>
+    <input type="" name="measure1" value="{{  service_update.measurements.0  }}">
+    <input type="" name="measure2" value="{{  service_update.measurements.1  }}">
+    <input type="" name="measure3" value="{{  service_update.measurements.2  }}"> <br>
 
     <button type="submit" name="">Cập nhật</button> <br>
 
