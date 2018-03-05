@@ -16,8 +16,14 @@
     <input type="text" name="yob" value="{{  service_update.yob   }}"> <br>
 
     <label for="">Giới tính</label>
-    <input type="radio" name="gender" value="0" checked> nữ
-    <input type="radio" name="gender" value="1"> nam <br>
+    {% if service_update.gender == 1  %}
+    <input type="radio" name="gender" value="1" checked> nam
+    <input type="radio" name="gender" value="0"> nữ <br>
+    {% else  %}
+    <input type="radio" name="gender" value="1"> nam
+    <input type="radio" name="gender" value="0" checked> nữ <br>
+    {% endif  %}
+
 
     <label for="">Chiều cao</label>
     <input type="text" name="height" value="{{  service_update.height   }}"> <br>
@@ -29,18 +35,13 @@
     <input type="text" name="address" value="{{  service_update.address   }}"> <br>
 
     <label for="">Trạng thái</label>
-
-
       {% if service_update.status == True  %}
-      <input type="radio" name="status" value=1 checked> True
-      <input type="radio" name="status" value=0> False <br>
+      <input type="radio" name="status" value="1" checked> True
+      <input type="radio" name="status" value="0"> False <br>
       {% else  %}
-      <input type="radio" name="status" value=1> True
-      <input type="radio" name="status" value=0 checked> False <br>
+      <input type="radio" name="status" value="1"> True
+      <input type="radio" name="status" value="0" checked> False <br>
       {% endif  %}
-
-
-
 
     <label for="">Ảnh</label>
     <input type="text" name="image" value="{{  service_update.image   }}"> <br>

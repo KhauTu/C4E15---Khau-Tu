@@ -66,11 +66,11 @@ def update(service_id):
 
         service_update.update(set__name = form['name'],
                                 set__yob = form['yob'],
-                                set__gender = form['gender'],
+                                set__gender = "1" if form['gender'] == "1" else "0",
                                 set__height = form['height'],
                                 set__phone = form['phone'],
                                 set__address = form['address'],
-                                set__status = True if form['status'] == 1 else False, # set__status == set_status
+                                set__status = True if form['status'] == "1" else False, # set__status == set_status
                                 set__image = form['image'],
                                 set__desciption = form['desciption'],
                                 set__measurements = set_measure # form['measurements'].split('-')
