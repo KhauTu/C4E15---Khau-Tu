@@ -1,0 +1,23 @@
+.text-upper {
+  text-transform: uppercase;
+}
+
+.text-red {
+  color: red;
+}
+
+.font-weight-bold {
+  font-weight: bold;
+}
+
+.font-karma {
+  font-family: 'Karma', serif;
+}
+
+.font-size-20px {
+  font-size: 20px
+}
+
+.text-italic {
+  font-style: italic;
+}

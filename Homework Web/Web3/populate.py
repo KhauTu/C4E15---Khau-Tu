@@ -30,7 +30,7 @@ for i in range(10):
                     address = fake.address(),
                     status = choice([True, False]),
                     image = 'http://bit.ly/web3girl{0}'.format(i),
-                    desciption = choice(about1)+ ', ' + choice(about2),
+                    desciption = choice(about1) + ', ' + choice(about2),
                     measurements = [90 + randint(-5, 5), 60 + randint(-3, 3), 90 + randint(-3, 3)])
     service.save()
     # link = 'http://bit.ly/web3girl{0}'.format(i)

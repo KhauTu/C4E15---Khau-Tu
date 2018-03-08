@@ -53,6 +53,7 @@
         <td>
           <a href="#">Sửa</a>
           <a href="{{  url_for('delete', service_id = service.id)  }}">Xóa</a>
+          <a href="{{  url_for('detail', service_id = service.id) }}">Chi tiết</a>
         </td>
       </tr>
       {%  endfor  %}

@@ -40,6 +40,11 @@ def admin():
     services = Service.objects()
     return render_template('admin.html', services = services)
 
+@app.route('/detail/<service_id>')
+def detail(service_id):
+    service = Service.objects().with_id(service_id)
+    return render_template('detail.html', service = service)
+
 @app.route('/delete/<service_id>')
 def delete(service_id):
     service_to_delete = Service.objects().with_id(service_id)
@@ -48,6 +53,7 @@ def delete(service_id):
     else:
         service_to_delete.delete()
         return redirect(url_for('admin'))
+
 @app.route('/new-service', methods = ['GET', 'POST'])
 def create():
     if request.method == 'GET':
@@ -73,6 +79,7 @@ def create():
                                 )
         new_service.save()
         return "Saved"
+
 
 if __name__ == '__main__':
   app.run(debug=True)
