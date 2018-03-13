@@ -1,0 +1,56 @@
+.background {
+  background-size: cover;
+  background-attachment: fixed;
+  background-image: url('http://cdn.home-designing.com/wp-content/uploads/2014/05/17-Contemporary-desk.jpeg');
+}
+.font-family {
+  font-family: 'Lato', sans-serif;
+}
+.d-flex {
+  display: flex;
+  /* background: #ccc; */
+  padding: 10px;
+  flex-flow: row wrap;
+  height: 500px;
+  /* align-items: center; */
+  justify-content: center;
+  /* align-content: center; */
+}
+.text-style {
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  height: 500px;
+}
+.li-background {
+  background-color: blue;
+}
+.circle {
+  border: 1px solid #ccc;
+  height: 250px;
+  border-radius: 50%;
+  width: 250px;
+  margin: 25px;
+  box-sizing: border-box;
+}
+.nav {
+  border: 0 solid #ccc;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  box-sizing: inherit;
+  height: 500px;
+}
+.nav li {
+  display: inline;
+}
+h1 {
+  margin: 50px 0 0 0;
+  padding: 50px 20px 20px 20px;
+}
+li div {
+  border-top: 2px solid #ccc;
+  margin: 15px;
+}
