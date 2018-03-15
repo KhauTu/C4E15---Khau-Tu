@@ -54,5 +54,13 @@ header div h3 {
   margin: 0;
   padding: 0;
   text-align: center;
+  box-sizing: border-box;
+}
+#sign-up {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  text-align: left;
   box-sizing: inherit;
 }
